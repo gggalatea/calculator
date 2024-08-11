@@ -8,3 +8,58 @@ html {
     box-sizing: inherit;
 }
 
+.container {
+    margin: 0px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc-container {
+    border: 1px solid black; /* just for testing, remove later */
+    width: 600px;
+    height: 700px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.display {
+    border: 1px solid black; /* just for testing, remove later */
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.display-text {
+    margin: 0px;
+}
+
+.btns-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.row {
+    flex: 1;
+    display: flex;
+    column-gap: 10px;
+}
+
+.reg-size {
+    flex: 1;
+    padding: 0px;
+    border: none;
+}
+
+.dbl-size {
+    flex: 2 1 10px;
+    padding: 0px;
+    border: none;
+}
