@@ -19,6 +19,7 @@ function divide(num1, num2) {
 let num1;
 let operator;
 let num2;
+let displayValue = 0;
 
 function operate(operator, num1, num2) {
     switch(operator) {
@@ -31,4 +32,11 @@ function operate(operator, num1, num2) {
         case "÷":
             return divide(num1, num2);
     }
+}
+
+const btnsContainer = document.querySelector(".btns-container");
+btnsContainer.addEventListener("click", updateDisplay);
+
+function updateDisplay() {
+
 }
