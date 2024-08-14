@@ -4,7 +4,7 @@ let num1 = 0;
 let operator = null;
 let num2 = null;
 let displayValue = "";
-let solution = true;
+let isNum1Answer = true;
 
 function add(num1, num2) {
     return num1 + num2;
@@ -36,11 +36,17 @@ function operate(operator, num1, num2) {
 }
 
 const displayText = document.querySelector(".display-text");
+
+function updateDisplayText() {
+    if (!num1) {
+        displayText.textContent = `${displayValue}`;
+    } else if (!operator)
+}
+
 displayText.textContent = `${num1} ${operator} ${displayValue}`;
 
 const btnsContainer = document.querySelector(".btns-container");
 btnsContainer.addEventListener("click", updateOperation);
 
 function updateOperation() {
-
 }
