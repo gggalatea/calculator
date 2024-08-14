@@ -1,9 +1,10 @@
 "use strict";
 
-let num1;
-let operator;
-let num2;
-let displayValue = 0;
+let num1 = 0;
+let operator = null;
+let num2 = null;
+let displayValue = "";
+let solution = true;
 
 function add(num1, num2) {
     return num1 + num2;
@@ -34,9 +35,12 @@ function operate(operator, num1, num2) {
     }
 }
 
-const btnsContainer = document.querySelector(".btns-container");
-btnsContainer.addEventListener("click", updateDisplay);
+const displayText = document.querySelector(".display-text");
+displayText.textContent = `${num1} ${operator} ${displayValue}`;
 
-function updateDisplay() {
+const btnsContainer = document.querySelector(".btns-container");
+btnsContainer.addEventListener("click", updateOperation);
+
+function updateOperation() {
 
 }
