@@ -47,6 +47,8 @@ function updateDisplayText() {
     }
 }
 
+updateDisplayText();
+
 const btnsContainer = document.querySelector(".btns-container");
 btnsContainer.addEventListener("click", updateOperation);
 
