@@ -38,12 +38,14 @@ function operate(operator, num1, num2) {
 const displayText = document.querySelector(".display-text");
 
 function updateDisplayText() {
-    if (!num1) {
+    if (num1 === null) {
         displayText.textContent = `${displayValue}`;
-    } else if (!operator)
+    } else if (operator === null) {
+        displayText.textContent = `${num1}`;
+    } else {
+        displayText.textContent = `${num1} ${operator} ${displayValue}`;
+    }
 }
-
-displayText.textContent = `${num1} ${operator} ${displayValue}`;
 
 const btnsContainer = document.querySelector(".btns-container");
 btnsContainer.addEventListener("click", updateOperation);
