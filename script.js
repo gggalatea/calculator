@@ -52,5 +52,13 @@ updateDisplayText();
 const btnsContainer = document.querySelector(".btns-container");
 btnsContainer.addEventListener("click", updateOperation);
 
-function updateOperation() {
+function updateOperation(e) {
+    if (e.target.classList.contains("btns-container") || e.target.classList.contains("row")) return;
+
+    if (e.target.dataset.btnNum) {
+        inputNum();
+    }
+}
+
+function inputNum() {
 }
