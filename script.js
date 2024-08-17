@@ -56,9 +56,15 @@ function updateOperation(e) {
     if (e.target.classList.contains("btns-container") || e.target.classList.contains("row")) return;
 
     if (e.target.dataset.btnNum) {
-        inputNum();
+        inputNum(e.target.dataset.btnNum);
     }
 }
 
-function inputNum() {
+function inputNum(numAsString) {
+    if (isNum1Answer && operator === null) {
+        num1 = null;
+        isNum1Answer = false;
+    }
+    displayValue += numAsString;
+    updateDisplayText();
 }
